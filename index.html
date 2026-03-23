@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Página com erros de acessibilidade</title>
+
+<style>
+/* contraste ruim */
+.bad-contrast{
+    color: #aaa;
+    background-color: #bbb;
+}
+
+/* elemento clicável que não é botão */
+.clickable{
+    padding:10px;
+    background:#ccc;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Teste de Acessibilidade</h1>
+
+<!-- pular níveis de heading -->
+<h4>Seção que pulou heading</h4>
+
+<!-- imagem sem alt -->
+<img src="praia.jpg">
+
+<!-- imagem com alt vazio indevido -->
+<img src="carro.jpg" alt="">
+
+<!-- link vazio -->
+<a href="#"></a>
+
+<!-- link com texto ruim -->
+<a href="#">clique aqui</a>
+
+<!-- botão sem texto -->
+<button></button>
+
+<!-- div usada como botão -->
+<div class="clickable" onclick="alert('clicou')">
+    Enviar
+</div>
+
+<!-- contraste ruim -->
+<p class="bad-contrast">
+Texto com contraste muito baixo
+</p>
+
+<!-- formulário sem label -->
+<form>
+
+<input type="text" placeholder="Nome">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Senha">
+
+<button>Enviar</button>
+
+</form>
+
+<br>
+
+<!-- tabela sem cabeçalho -->
+<table border="1">
+<tr>
+<td>Nome</td>
+<td>Idade</td>
+</tr>
+
+<tr>
+<td>Murilo</td>
+<td>25</td>
+</tr>
+
+<tr>
+<td>Ana</td>
+<td>30</td>
+</tr>
+</table>
+
+<br>
+
+<!-- iframe sem title -->
+<iframe src="https://example.com"></iframe>
+
+<br><br>
+
+<!-- texto como imagem -->
+<img src="botao-comprar.png">
+
+<!-- lista incorreta -->
+<ul>
+<div>Item 1</div>
+<div>Item 2</div>
+</ul>
+
+<!-- campo obrigatório sem indicação -->
+<input type="text">
+
+</body>
+</html>
